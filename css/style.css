@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'System-font';
+    src: url('../font/font1.ttf') format('ttf');
+}
+
 body {
     overflow-x: hidden;
+    font-family: 'System-font';
 }
 
 .custom-hr-img {
@@ -29,6 +35,7 @@ body {
 .title-about {
     color: white;
     padding-bottom: 70px;
+    font-family: 'System-font';
 }
 
 .card {
@@ -68,7 +75,7 @@ body {
 .new-section {
     background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-07.png") no-repeat;
     background-size: 100% 100%;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .footer-info {

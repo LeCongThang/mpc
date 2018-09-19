@@ -6,7 +6,7 @@ body {
     padding-top: 3rem;
     color: #5a5a5a;
   }
-  
+
   
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
@@ -15,17 +15,29 @@ body {
   .carousel {
     margin-bottom: 4rem;
   }
+  .carousel-indicators{
+    bottom: 12vh;
+  }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    bottom: 3rem;
+    top: 30%;
     left: 46%;
     z-index: 10;
   }
   
   /* Declare heights because of positioning of img element */
-  .carousel-item {
+  /* .carousel-item {
     height: 32rem;
     background-color: #777;
+  } */
+  .carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    /* background: no-repeat center center scroll; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
   .carousel-item > img {
     position: absolute;
