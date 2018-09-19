@@ -1,48 +1,79 @@
-.custom-hr-img{
+body {
+    overflow-x: hidden;
+}
+
+.custom-hr-img {
     margin: 0 auto;
     display: block;
 }
-.background-blur{
-    -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
+
+.background-blur {
+    -webkit-filter: blur(3px);
+    /* Safari 6.0 - 9.0 */
     filter: blur(3px);
 }
-.img-responsive{
+
+.img-responsive {
     width: 100%;
     height: auto;
 }
-.about-section{
+
+.about-section {
     margin: 1px;
 }
-.about-content{
-    padding: 70px;
+
+.about-content {
+    padding: 70px 0;
 }
-.title-about{
+
+.title-about {
     color: white;
     padding-bottom: 70px;
 }
-.card{
+
+.card {
     background-color: rgba(255, 255, 255, 0.7)
 }
-.about-section{
-    background:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-03.png") no-repeat;
+
+.about-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-03.png") no-repeat;
     background-size: 100% 100%;
 }
-.red{
-    color:red;
 
+.red {
+    color: red;
 }
-.lead{
+
+.lead {
     text-align: justify;
 }
-.info{
-    padding: 20px;
+
+.info {
+    padding: 20px 0 0;
 }
-.custom-btn{
-    background-color: black;
-    color:#fff;
+
+.custom-btn {
+    position: relative;
+    left: 35%;
+    transform: translateX(-35%);
 }
-.new-section{
-    background:linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-07.png") no-repeat;
+
+.custom-btn p {
+    position: absolute;
+    color: #fff;
+    top: 35%;
+    left: 35%;
+}
+
+.new-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-07.png") no-repeat;
     background-size: 100% 100%;
     padding: 50px;
+}
+
+.footer-info {
+    padding: 10px;
+    background-color: dimgrey;
+    color: #fff;
+    margin-bottom: 0;
 }
