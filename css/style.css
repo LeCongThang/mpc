@@ -1,11 +1,14 @@
 @font-face {
-    font-family: 'System-font';
-    src: url('../font/font1.ttf') format('ttf');
+    font-family: System-font-thin;
+    src: url('../font/font3.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: System-font-bold;
+    src: url('../font/font2.ttf') format('truetype');
+}
 body {
     overflow-x: hidden;
-    font-family: 'System-font';
+    font-family: System-font-thin;
 }
 
 .custom-hr-img {
@@ -35,11 +38,12 @@ body {
 .title-about {
     color: white;
     padding-bottom: 70px;
-    font-family: 'System-font';
+    font-family: 'System-font-bold';
+    font-size:50px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.7)
+    background-color: rgba(255, 255, 255, 0.8)
 }
 
 .about-section {
@@ -47,14 +51,31 @@ body {
     background-size: 100% 100%;
 }
 
-.red {
-    color: red;
+.has-shadow{
+    -webkit-box-shadow: 0px 0px 33px 1px rgba(92,90,92,0.79);
+-moz-box-shadow: 0px 0px 33px 1px rgba(92,90,92,0.79);
+box-shadow: 0px 0px 33px 1px rgba(92,90,92,0.79);
 }
-
-.lead {
+.has-background-blur{
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2));
+}
+.red {
+  color: #c6001e;
+}
+.field-title{
+    font-weight: bold;
+    font-family: System-font-bold;
+    color: #004781;
+    padding: 5px 0 0 5px;
+}
+.field-content {
     text-align: justify;
 }
-
+.field-no-bg{
+    background:#fff;
+     padding: 70px 0;
+     
+}
 .info {
     padding: 20px 0 0;
 }
@@ -73,14 +94,47 @@ body {
 }
 
 .new-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img-07.png") no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)), url("../images/img-07.png") no-repeat;
     background-size: 100% 100%;
     padding: 50px 0;
 }
-
+.partner-section{
+    padding: 50px 0;
+}
+.card-text{
+    text-align: justify;
+    font-size:14px;
+}
+.card-body a h6 {
+    font-family: System-font-bold;
+    color: #004781;
+    font-size:18px;
+}
+.feedback-section{
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/img_16.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 50px 0;
+}
+.slick-prev:before, .slick-next:before {
+  color: #c6001e;    
+}
+.footer-title{
+    font-family: System-font-bold;
+}
 .footer-info {
     padding: 10px;
     background-color: dimgrey;
     color: #fff;
     margin-bottom: 0;
+    
+}
+.no-bullets{
+    list-style-type: none;
+    margin-left: -40px;
+    font-size:15px;
+}
+@media (min-width:415px){
+    .field-no-bg{
+        margin-left: 20px;
+    }
 }

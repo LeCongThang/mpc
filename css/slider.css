@@ -3,11 +3,35 @@
 /* Padding below the footer and lighter body text */
 
 body {
-    padding-top: 3rem;
     color: #5a5a5a;
-  }
-
-  
+}
+.navbar{
+display: block;
+}
+li.nav-item .nav-link{
+  font-family: System-font-bold;
+  color: #000;
+  text-transform:uppercase;
+}
+li.active > .nav-link
+{
+  color: #c6001e;
+}
+ .logo{
+  transform: translateX(32%);
+ }
+ .hr-header{
+   margin: 5px 0;
+}
+.navbar-toggler{
+  border: 1px solid #004781;
+}
+.navbar-toggler-icon{
+  background: #004781;
+}
+ .white-background{
+   background-color: white;
+ }
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
   
@@ -16,13 +40,25 @@ body {
     margin-bottom: 4rem;
   }
   .carousel-indicators{
-    bottom: 12vh;
+    bottom:30vh;
+    left: 0;
+    transform: translateX(-60%) rotate(90deg);
+  }
+  .carousel-indicators li{
+    background-color: aquamarine;
+    width:80px;
+    height: 3px;
+  }
+  .carousel-indicators .active{
+    background-color:#004781;
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
     top: 30%;
     left: 46%;
     z-index: 10;
+    padding:20px 20px;
+    border-radius:5px;
   }
   
   /* Declare heights because of positioning of img element */
@@ -31,7 +67,7 @@ body {
     background-color: #777;
   } */
   .carousel-item {
-    height: 100vh;
+    height: 80vh;
     min-height: 300px;
     /* background: no-repeat center center scroll; */
     -webkit-background-size: cover;
@@ -57,7 +93,9 @@ body {
     text-align: center;
   }
   .marketing h2 {
-    font-weight: 400;
+    font-weight: bold;
+    padding: 30px 0 0;
+    color: #004781;
   }
   .marketing .col-lg-4 p {
     margin-right: .75rem;
@@ -85,10 +123,15 @@ body {
     }
   
     .featurette-heading {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
-  
+  @media (max-width: 415px){
+    .logo{
+      display: inline-block;
+      transform: translateX(100%);
+    }
+  }
   @media (min-width: 62em) {
     .featurette-heading {
       margin-top: 2rem;
