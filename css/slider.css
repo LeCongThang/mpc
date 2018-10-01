@@ -1,6 +1,92 @@
+@keyframes 
+slideShow {  0% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0.8;
+ transform:scale(1.1);
+ -ms-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0.5;
+ transform:scale(1.2);
+ -ms-transformm:scale(1.2);
+}
+}
+ @-o-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -o-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0.8;
+ -o-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0.5;
+ -o-transformm:scale(1.2);
+}
+}
+ @-moz-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -moz-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0.8;
+ -moz-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0.5;
+ -moz-transformm:scale(1.2);
+}
+}
+ @-webkit-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -webkit-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0.8;
+ -webkit-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0.5;
+ -webkit-transformm:scale(1.2);
+}
+}
+
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+
 
 body {
     color: #5a5a5a;
@@ -15,10 +101,14 @@ li.nav-item .nav-link{
 }
 li.active > .nav-link
 {
-  color: #c6001e;
+  color: #004781;
+  border-bottom:1px solid #004781;
 }
  .logo{
-  transform: translateX(32%);
+  transform: translateX(16%);
+ }
+ .logo img{
+   padding: 0 40px;
  }
  .hr-header{
    margin: 5px 0;
@@ -40,13 +130,13 @@ li.active > .nav-link
     margin-bottom: 4rem;
   }
   .carousel-indicators{
-    bottom:30vh;
+    bottom:33vh;
     left: 0;
     transform: translateX(-60%) rotate(90deg);
   }
   .carousel-indicators li{
     background-color: aquamarine;
-    width:80px;
+    width:60px;
     height: 3px;
   }
   .carousel-indicators .active{
@@ -54,11 +144,34 @@ li.active > .nav-link
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    top: 30%;
+    /* top: 47%; */
     left: 46%;
-    z-index: 10;
+    right: 5%;
+    /* bottom: 18%; */
+  }
+  .caption-inner:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    top: 0; right: 0; left: 0;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+  }
+  .caption-inner{
     padding:20px 20px;
     border-radius:5px;
+    position: relative;
+    background: rgba(230,240,255,0.8);
+    border: 2px dashed transparent;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.15);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
   }
   
   /* Declare heights because of positioning of img element */
@@ -67,9 +180,8 @@ li.active > .nav-link
     background-color: #777;
   } */
   .carousel-item {
-    height: 80vh;
-    min-height: 300px;
-    /* background: no-repeat center center scroll; */
+    height: 100vh;
+    width: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -79,8 +191,13 @@ li.active > .nav-link
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100vh;
+    /* opacity: 0; */
+    animation: slideShow 10s linear infinite 0s;
+  -o-animation: slideShow 10s linear infinite 0s;
+  -moz-animation: slideShow 10s linear infinite 0s;
+  -webkit-animation: slideShow 10s linear infinite 0s;
   }
   
   
@@ -129,11 +246,27 @@ li.active > .nav-link
   @media (max-width: 415px){
     .logo{
       display: inline-block;
-      transform: translateX(100%);
+      transform: translateX(25%);
+    }
+    .carousel-item {
+      height: 43vh;
+    }
+    .carousel-item > img {
+      height: auto;
+      padding-top: 100px;
+    }
+    .carousel-indicators{
+      bottom:13vh;
+    }
+    .carousel-indicators li{
+      width:20px;
     }
   }
   @media (min-width: 62em) {
     .featurette-heading {
       margin-top: 2rem;
     }
+  }
+  .slider .partner {
+    margin: auto;
   }
